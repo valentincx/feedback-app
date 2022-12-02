@@ -8,7 +8,12 @@ function FeedbackList() {
   const { feedback, isLoading } = useContext(FeedbackContext)
 
   if (!isLoading && (!feedback || feedback.length === 0)) {
-    return <p>No feedback yet</p>
+    return (
+      <p>
+        No feedback yet, this project is working using mock data on local with
+        db.json
+      </p>
+    )
   }
 
   return isLoading ? (
